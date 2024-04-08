@@ -275,3 +275,4 @@
 /Users/emmanuelarhin/Desktop/MindSpringsTest/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /Users/emmanuelarhin/Desktop/MindSpringsTest/obj/Debug/net8.0/MindSpringsTest.csproj.AssemblyReference.cache
 /Users/emmanuelarhin/Desktop/MindSpringsTest/obj/Debug/net8.0/MindSpri.AD0FA473.Up2Date
+/Users/emmanuelarhin/Desktop/MindSpringsTest/obj/Debug/net8.0/MindSpringsTest.sourcelink.json

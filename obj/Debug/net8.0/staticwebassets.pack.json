@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/Users/emmanuelarhin/Desktop/MindSpringsTest/wwwroot/js/translator.js",
-      "PackagePath": "staticwebassets/js/translator.js"
-    },
-    {
       "Id": "/Users/emmanuelarhin/Desktop/MindSpringsTest/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },

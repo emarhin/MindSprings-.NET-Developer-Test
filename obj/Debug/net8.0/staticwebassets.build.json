@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9mzwo7GwHEzZNnfvdZBIpzchx0Wt1ryuhq8pfGnshHg=",
+  "Hash": "oKEkeyQey54sLWy55YV86IEli306RsZtOICJfMYVIws=",
   "Source": "MindSpringsTest",
   "BasePath": "_content/MindSpringsTest",
   "Mode": "Default",
@@ -110,25 +110,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
-    },
-    {
-      "Identity": "/Users/emmanuelarhin/Desktop/MindSpringsTest/wwwroot/js/translator.js",
-      "SourceId": "MindSpringsTest",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/emmanuelarhin/Desktop/MindSpringsTest/wwwroot/",
-      "BasePath": "_content/MindSpringsTest",
-      "RelativePath": "js/translator.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/js/translator.js"
     },
     {
       "Identity": "/Users/emmanuelarhin/Desktop/MindSpringsTest/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

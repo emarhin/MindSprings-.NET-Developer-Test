@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MindSpringsTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a08dc0b094ad85e7d5da9145f8da9505f4985bc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MindSpringsTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MindSpringsTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
