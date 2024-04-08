@@ -1,0 +1,91 @@
+@model MindSpringsTest.Models.storeResultModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Translate and Save to DB for Analysis</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TextEntered" class="control-label"></label>
+                <input asp-for="TextEntered"  id="textToTranslate"    name="TextEntered"  class="form-control" />
+                <span asp-validation-for="TextEntered" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="translatedText" class="control-label"></label>
+                <input asp-for="translatedText"   id="translatedText"  name="translatedText" class="form-control" />
+                <span asp-validation-for="translatedText" class="text-danger"></span>
+            </div>
+            <div class="form-group px-6">
+               <button id="submitButton" class="btn btn-primary" >Translate to Leetspeak</button>
+               <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("submitButton")
+      .addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Add your custom logic here
+        console.log("Submit button clicked");
+
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Define the API endpoint URL
+        var url = "https://api.funtranslations.com/translate/leetspeak";
+
+        // Set up the request
+        xhr.open("POST", url, true);
+        //xhr.setRequestHeader('Content-Type', 'application/json');
+
+        // Set up the callback function for when the response is received
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            // Parse the JSON response
+            var response = JSON.parse(xhr.responseText);
+            // Display the translated text
+            document.getElementById("translatedText").value =
+              response.contents.translated;
+          } else {
+            // If request fails, log the error
+            console.error("Request failed. Status:", xhr.status);
+          }
+        };
+
+        // Set up error handling
+        xhr.onerror = function () {
+          console.error("Request failed. Network error.");
+        };
+
+        var formData = new FormData();
+        formData.append(
+          "text",
+          document.getElementById("textToTranslate").value,
+        );
+
+        xhr.send(formData);
+      });
+  });
+</script>
+

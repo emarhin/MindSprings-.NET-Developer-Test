@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+ <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<form id="translationForm" method="post" action="/Home/Translate">
+
+    <textarea id="textToTranslate"  name="TextEntered"  rows="4" cols="50"></textarea><br>
+    <button onclick="translateToLeetspeak(document.getElementById('textToTranslate').value)">Translate to Leetspeak</button>
+    <div id="translatedText"  name="translatedText">how are you</div>
+
+
+         <button type="submit">Save Result</button>
+
+        </form>
+</div>
+
+
+<script>
+    document.getElementById('translationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const translatedText = document.getElementById('translatedText').innerText;
+        const textEntered = document.getElementById('textToTranslate').value;
+        console.log(translatedText);
+        console.log(textEntered);
+
+
+        var formData = new URLSearchParams();
+formData.append('TextEntered', textEntered);
+formData.append('TranslatedText', 'Your translated text');
+
+
+
+        // Submit the form data via AJAX
+        fetch('/Home/Translate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body:formData
+        }).then(response => {
+            // Handle the response if needed
+            console.log('Form submitted successfully');
+        }).catch(error => {
+            // Handle errors
+            console.error('Error submitting form:', error);
+        });
+    });
+</script>
