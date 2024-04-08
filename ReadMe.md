@@ -31,6 +31,6 @@ git clone https://github.com/emarhin/MindSprings-.NET-Developer-Test.git
 ### Step 3: Running the project
 ``` bash
 cd tp the project name (MindSprings-.NET-Developer-Test)
-Run dotnet watch run
+dotnet watch run
 
 ```
