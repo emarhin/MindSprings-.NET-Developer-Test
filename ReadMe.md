@@ -27,8 +27,8 @@ Clone this repository to your local machine using the following command:
 ```bash
 git clone https://github.com/emarhin/MindSprings-.NET-Developer-Test.git
 
+```
+### Step 3: Running the project
 
-
-### Step Three
 cd tp the project name (MindSprings-.NET-Developer-Test)
 Run dotnet watch run
